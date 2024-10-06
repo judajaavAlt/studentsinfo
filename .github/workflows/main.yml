@@ -3,7 +3,7 @@ run-name: testing-data
 on:
     pull_request:
         branches: 
-        - main
+        - master
         types:
         - opened
         - synchronize
