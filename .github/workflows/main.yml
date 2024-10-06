@@ -25,12 +25,3 @@ jobs:
 
     - name: Run tests
       run: npm test
-    
-  notify:
-    runs-on: ubuntu-latest
-    needs: test
-    if: failure()
-    steps:
-    - name: Send failure message
-      run: |
-        echo "The workflow has failed! Please check the logs for more details."
