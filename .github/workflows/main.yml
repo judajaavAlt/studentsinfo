@@ -1,0 +1,36 @@
+name: check-Data
+run-name: testing-data
+on:
+    pull_request:
+        branches: 
+        - main
+        types:
+        - opened
+        - synchronize
+        - reopened
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: 14
+
+    - name: Install dependencies
+      run: npm i
+
+    - name: Run tests
+      run: npm test
+    
+  notify:
+    runs-on: ubuntu-latest
+    needs: test
+    if: failure()
+    steps:
+    - name: Send failure message
+      run: |
+        echo "The workflow has failed! Please check the logs for more details."
