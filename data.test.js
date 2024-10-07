@@ -2,6 +2,7 @@
 const { info } = require('console');
 const fs = require('fs');
 const path = require('path');
+const { execPath } = require('process');
 
 // gets into the public/data directory
 const directoryPath = path.join(__dirname, 'public/data');
@@ -35,7 +36,14 @@ function checkInfo(folders, file)
 function checkIfInfoIsDictionary(file)
 {
     const infoPath = path.join(__dirname, "public/data/" + file + "/info.json")
-    const content = JSON.parse(fs.readFileSync(infoPath, "utf8"))
+    let content
+    try
+    {
+        content = JSON.parse(fs.readFileSync(infoPath, "utf8"))
+    }catch
+    {
+        return false
+    }
     if (content.constructor == Object) {
         return true
     }else
