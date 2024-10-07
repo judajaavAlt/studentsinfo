@@ -1,0 +1,10 @@
+{
+    "nombre": "Juan Jose Paredes",
+    "edad": 21,
+    "carrera": "Ingeniería de Sistemas",
+    "semestre": 6,
+    "gustos": ["Dulces", "comer", "caminar", "fruta", "mi novia", "leer"],
+    "noGustos": ["verduras", "sopa", "Las mentiras", "las vacas vivas"],
+    "foto": "https://instagram.fclo1-3.fna.fbcdn.net/v/t51.2885-19/369716134_987343345672190_2096921997874934240_n.jpg?stp=dst-jpg_s150x150&_nc_ht=instagram.fclo1-3.fna.fbcdn.net&_nc_cat=102&_nc_ohc=_X_WK7rcMXYQ7kNvgFCyO4w&_nc_gid=3ca95d07d9ca4691b38209122c97a5a7&edm=ALGbJPMBAAAA&ccb=7-5&oh=00_AYAj9xEAfdMMiClKIzKP54E0ymS93TnQcFp6bjJJOtm1vQ&oe=670A28AB&_nc_sid=7d3ac5",
+    "redSocial": "Instagram"
+}
